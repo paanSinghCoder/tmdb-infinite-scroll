@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+	background-color: black;
+	color: whitesmoke;
+} */
+
+.truncate-no-space {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.truncate-height {
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Number of lines to show */
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

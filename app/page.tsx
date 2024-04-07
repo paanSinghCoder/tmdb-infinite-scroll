@@ -1,6 +1,8 @@
 'use client'
 
+import { Suspense } from 'react'
 import { Container } from '@components/Container'
+import Header from '@components/Header'
 import Loader from '@components/Loader'
 import MovieCard from '@components/MovieCard'
 import { MovieCardPropsType } from '@components/MovieCard/MovieCard.types'
@@ -12,24 +14,11 @@ const tmdbToken = process.env.TMDB_TOKEN
 export default function Home() {
 	const { data, isLoading, error } = useFetch(BASE_URL, tmdbToken)
 
-	// if (data.length < 1 && isLoading) {
-	// 	return <Loader />
-	// }
-
-	if (error) {
-		return <div className="text-red-500">Error: {error}. Please refresh the page.</div>
-	}
-
 	return (
 		<Container>
-			<section className="py-16">
-				<h1 className="lg:text-8xl text-5xl font-bold text-slate-800 pb-6 px-2 lg:px-0">
-					Popular movies
-				</h1>
-				<p className="text-md text-slate-600 px-2 lg:px-0">
-					Explore the most popular movies from around the world on TMDB. Keep scrolling.
-				</p>
-			</section>
+			<Suspense fallback={<Loader />}>
+				<Header />
+			</Suspense>
 			<section className="flex flex-wrap justify-between">
 				{data.map((item: MovieCardPropsType) => (
 					<MovieCard
@@ -43,6 +32,7 @@ export default function Home() {
 					/>
 				))}
 				{isLoading && <Loader />}
+				{error && <div className="text-red-500">Error: {error}. Please refresh the page.</div>}
 			</section>
 		</Container>
 	)

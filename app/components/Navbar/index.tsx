@@ -16,8 +16,6 @@ export const Navbar = () => (
 					</Link>
 				</div>
 				<div className="flex gap-8">
-					<NavbarItem label="Watchlist" onClick={() => null} />
-					<NavbarItem label="Signin" onClick={() => null} />
 					<NavbarItem label="Github" onClick={() => null} />
 				</div>
 			</nav>

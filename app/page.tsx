@@ -9,9 +9,8 @@ import { MovieCardPropsType } from '@components/MovieCard/MovieCard.types'
 import useFetch from '@hooks/useFetch.hook'
 import { BASE_URL } from '@utils/constants'
 
-const tmdbToken = process.env.TMDB_TOKEN
-
 export default function Home() {
+	const tmdbToken = process.env.TMDB_TOKEN
 	const { data, isLoading, error } = useFetch(BASE_URL, tmdbToken)
 
 	return (

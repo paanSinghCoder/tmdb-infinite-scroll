@@ -9,6 +9,7 @@ const useFetch = (url: string, token: string = '') => {
 	/*
 	 * @desc Fetch popular movies list with page number.
 	 * @return Array[]
+	 * @reference https://developer.themoviedb.org/reference/movie-popular-list
 	 */
 	const fetchData = async () => {
 		try {

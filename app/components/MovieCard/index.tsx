@@ -11,12 +11,14 @@ const MovieCard = ({
 		<div
 			key={id}
 			className="border rounded-lg mb-8 lg:w-[300px] mx-auto hover:scale-105 transition duration-75 cursor-pointer">
-			<img
-				src={`http://image.tmdb.org/t/p/original${poster_path}`}
-				alt="movie poster"
-				className="rounded-t-lg"
-				loading="lazy"
-			/>
+			<div className="md:lg:h-[450px]">
+				<img
+					src={`http://image.tmdb.org/t/p/original${poster_path}`}
+					alt="movie poster"
+					className="rounded-t-lg"
+					loading="lazy"
+				/>
+			</div>
 			<div className="p-2 flex flex-col justify-between gap-2 ">
 				<div className="flex items-start justify-between min-h-[55px] pt-1">
 					<h1 className="font-bold text-slate-700 text-sm">{title.substring(0, 35)}</h1>

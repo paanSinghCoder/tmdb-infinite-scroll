@@ -32,3 +32,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Error and loading state handling.
 - Prettier for code formtting.
 - Tailwind for styling.
+- `.env.local` file for secret.
+- Conventional commit messages.

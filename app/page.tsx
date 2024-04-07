@@ -3,6 +3,7 @@
 import { Container } from '@components/Container'
 import Loader from '@components/Loader'
 import MovieCard from '@components/MovieCard'
+import { MovieCardPropsType } from '@components/MovieCard/MovieCard.types'
 import useFetch from '@hooks/useFetch.hook'
 import { BASE_URL } from '@utils/constants'
 
@@ -11,9 +12,9 @@ const tmdbToken = process.env.TMDB_TOKEN
 export default function Home() {
 	const { data, isLoading, error } = useFetch(BASE_URL, tmdbToken)
 
-	if (data.length < 1 && isLoading) {
-		return <Loader />
-	}
+	// if (data.length < 1 && isLoading) {
+	// 	return <Loader />
+	// }
 
 	if (error) {
 		return <div className="text-red-500">Error: {error}. Please refresh the page.</div>
@@ -30,7 +31,7 @@ export default function Home() {
 				</p>
 			</section>
 			<section className="flex flex-wrap justify-between">
-				{data.map((item: any) => (
+				{data.map((item: MovieCardPropsType) => (
 					<MovieCard
 						id={item?.id}
 						poster_path={item?.poster_path}
@@ -41,8 +42,8 @@ export default function Home() {
 						overview={item?.overview}
 					/>
 				))}
+				{isLoading && <Loader />}
 			</section>
-			{isLoading && <Loader />}
 		</Container>
 	)
 }

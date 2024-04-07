@@ -1,3 +1,4 @@
+import React from 'react'
 import { MovieCardPropsType } from './MovieCard.types'
 
 const MovieCard = ({

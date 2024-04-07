@@ -34,3 +34,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Tailwind for styling.
 - `.env.local` file for secret.
 - Conventional commit messages.
+- Add some types using jest and React-Testing-Library.
+- Layout file to keep Navbar constant on route changes.

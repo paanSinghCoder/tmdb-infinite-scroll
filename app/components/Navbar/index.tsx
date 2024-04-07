@@ -1,8 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { Container } from '@components/Container'
-import { NavbarItem } from '@components/NavbarItem'
+import Link from 'next/link'
 
 export const Navbar = () => (
 	<div className="border-b mb-2 ">
@@ -16,7 +15,12 @@ export const Navbar = () => (
 					</Link>
 				</div>
 				<div className="flex gap-8">
-					<NavbarItem label="Github" onClick={() => null} />
+					<Link
+						href="https://github.com/paanSinghCoder/tmdb-infinite-scroll"
+						target="_blank"
+						className="cursor-pointer p-2 hover:bg-slate-100 rounded-md">
+						<img alt="" src="/github.png" className="h-4 w-4" />
+					</Link>
 				</div>
 			</nav>
 		</Container>

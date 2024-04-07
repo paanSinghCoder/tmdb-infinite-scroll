@@ -21,7 +21,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Features
 
-- Logic for infinite scroll can be found in `useFetch` custom hook.
+- Logic for infinite scroll can be found in `useFetch.hook.tsx` custom hook.
 - React.memo for controlling Movie card render.
 - Suspence for lazy loading component.
 - Typescript for types.

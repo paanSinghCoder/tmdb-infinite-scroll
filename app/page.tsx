@@ -10,7 +10,7 @@ import useFetch from '@hooks/useFetch.hook'
 import { BASE_URL } from '@utils/constants'
 
 export default function Home() {
-	const tmdbToken = process.env.TMDB_TOKEN
+	const tmdbToken = process.env.NEXT_PUBLIC_TMDB_TOKEN
 	const { data, isLoading, error } = useFetch(BASE_URL, tmdbToken)
 
 	return (

@@ -2,7 +2,6 @@ import React from 'react'
 import { MovieCardPropsType } from './MovieCard.types'
 
 const MovieCard = ({
-	id = '',
 	poster_path = '',
 	title = 'Movie',
 	vote_average = 0,
@@ -10,9 +9,7 @@ const MovieCard = ({
 	original_language = 'EN',
 	overview = ''
 }: MovieCardPropsType) => (
-	<div
-		key={id}
-		className="border rounded-lg mb-8 lg:w-[300px] mx-auto hover:scale-105 transition duration-75 cursor-pointer">
+	<div className="border rounded-lg mb-8 lg:w-[300px] mx-auto hover:scale-105 transition duration-75 cursor-pointer">
 		<div className="md:lg:h-[450px]">
 			<img
 				src={`http://image.tmdb.org/t/p/original${poster_path}`}

@@ -21,7 +21,7 @@ export default function Home() {
 			<section className="flex flex-wrap justify-between">
 				{data.map((item: MovieCardPropsType) => (
 					<MovieCard
-						id={item?.id}
+						key={item?.id}
 						poster_path={item?.poster_path}
 						title={item?.title}
 						vote_average={item?.vote_average}

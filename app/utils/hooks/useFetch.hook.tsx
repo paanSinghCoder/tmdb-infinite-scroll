@@ -27,7 +27,7 @@ const useFetch = (url: string, token: string = '') => {
 		}
 	}
 
-	const handleScroll = async (e: any) => {
+	const handleScroll = () => {
 		try {
 			if (
 				window.innerHeight + document.documentElement.scrollTop + 1 >=

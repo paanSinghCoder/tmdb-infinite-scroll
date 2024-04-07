@@ -20,6 +20,12 @@ export default function Home() {
 
 	return (
 		<Container>
+			<section className=" py-16">
+				<h1 className="text-8xl font-bold text-slate-800 pb-6">Popular movies</h1>
+				<p className="text-md text-slate-600">
+					Explore the most popular movies from around the world on TMDB. Keep scrolling.
+				</p>
+			</section>
 			<section className="flex flex-wrap justify-between">
 				{data.map((item: any) => (
 					<MovieCard
